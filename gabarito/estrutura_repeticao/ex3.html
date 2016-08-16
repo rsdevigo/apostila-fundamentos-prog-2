@@ -1,0 +1,44 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 03 - Lista do While
+// Em todos os exercícios irei responder utilizando while e for.
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+// n! representa a operação de fatorial, ou seja, n! é igual a dizer:
+// n * (n-1) * (n-2) * ... * 1
+// Exemplo: 4! = 4 * 3 * 2 * 1 =  24
+var n, // variável que guarda o valor digitado pelo usuário.
+    fatorial = 1; // variável que guarda o resultado de n!, incializa com 1, pois
+                  // o número 1 é um elemento neutro em uma multiplicação.
+
+// Passo 1: Ler a entrada do usuário, no caso o número inteiro positivo n.
+n = +prompt("Digite um número inteiro positivo");
+
+// Resposta utilizando FOR
+// Passo 2: Realizar a multiplicação dos n primeiros inteiros positivos.
+for (var i = 1; i <= n; i = i + 1) {
+  fatorial = fatorial * i;  // Aqui a cada execução do for, você garante que a variável
+                  // fatorial está com o valor de 1 * ... * i. Até que o i seja n, e
+                  // finaliza a execução, e isso garante que a variável fatorial
+                  // esteja com o valor de 1 * ... * n
+}
+
+// Passo 3: Mostrar o resultado de n!
+alert(fatorial)
+
+
+// Resposta utilizando WHILE
+// Passo 2: Realizar a multiplicação dos n primeiros inteiros positivos.
+var fatorial = 1;
+while (n > 0) {
+  fatorial = fatorial * n;
+  n = n - 1; // Aqui nós subtraimos 1 de n, pois assim realizamos a fatoração
+            // de forma inversa, começando com n, depois n-1 depois n-2 até que
+            // n tenha o valor de 1.
+}
+
+// Passo 3: Mostrar o resultado de n!
+alert(fatorial)
+
+</script>

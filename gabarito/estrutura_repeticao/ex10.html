@@ -1,0 +1,60 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 10 - Lista do While
+// Em todos os exercícios irei responder utilizando while e for.
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+
+var n, // variável que guarda o valor digitado pelo usuário.
+    nPositivos = 0, // Variável que guardará o número de inteiros positivos digitados
+    nNegativos = 0; // Variável que guardará o número de inteiros negativos digitados
+
+// Passo 1: Ler um número inteiro positivo.
+n = +prompt("Digite um número inteiro positivo");
+
+
+// Passo 2: Criar um laço que lê um número e verifica se o mesmo é positivo.
+// Caso for positivo: o contador de positivos é incrementado
+// Caso não for: o contador de negativos é incrementado
+for (var i = 1;  i <= n; i = i + 1) {
+  var inteiro = +prompt("Digite um inteiro");
+  if (inteiro > 0) { // Verificamos se o valor digitado pelo usuário é maior do que
+                     // zero, se for, o nPositivos é incrementado, simbolizando
+                     // que dentre a sequência digitada apareceu mais um numero
+                     // positivo.
+      nPositivos = nPositivos + 1;
+  } else {
+    nNegativos = nNegativos + 1;
+  }
+
+}
+
+//Passo 3: Mostrar o valor da soma
+alert ('O número de números positivos é: '+nPositivos);
+alert ('O número de números negtivos é: '+nNegativos);
+
+
+nPositivos = 0;
+nNegativos = 0;
+// Passo 2: Criar um laço que lê um número e verifica se o mesmo é positivo.
+// Caso for positivo: o contador de positivos é incrementado
+// Caso não for: o contador de negativos é incrementado
+while (n > 0) {
+  var inteiro = +prompt("Digite um inteiro");
+  if (inteiro > 0) { // Verificamos se o valor digitado pelo usuário é maior do que
+                     // zero, se for, o nPositivos é incrementado, simbolizando
+                     // que dentre a sequência digitada apareceu mais um numero
+                     // positivo.
+      nPositivos = nPositivos + 1;
+  } else {
+    nNegativos = nNegativos + 1;
+  }
+  n = n - 1;
+}
+
+//Passo 3: Mostrar o valor da soma
+alert ('O número de números positivos é: '+nPositivos);
+alert ('O número de números negtivos é: '+nNegativos);
+
+</script>

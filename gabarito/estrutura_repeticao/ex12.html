@@ -1,0 +1,52 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 12 - Lista do While
+// Em todos os exercícios irei responder utilizando while e for.
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+
+var diaMaiorVenda = 1, // variável que guarda o dia que a loja vendeu mais discos
+                       // Inicializa com 1 pois, assumimos que a maior venda foi no dia 1.
+    quantidadeMaiorVenda; // variável que guarda a quantidade de discos nesse dia.
+
+// Passo 2: Ler o número de discos vendidos do primeiro dia, para a gente ter um
+// Parâmetro, assumindo que o primeiro dia de Abril obteve a maior venda.
+quantidadeMaiorVenda = +prompt("Digite o número de vendas do dia 1 de abril");
+
+// Passo 3: Criar um laço que lê o número de discos vendidos no i-ésimo dia.
+for (var i = 2;  i <= 30; i = i + 1) {
+  var vendas = +prompt("Digite o número de vendas do dia "+i+" de abril");
+  if (vendas > quantidadeMaiorVenda) { //Verifica se o número de vendas foi maior
+                                       // do que o maior atual, se for
+     quantidadeMaiorVenda = vendas; //Atualiza o valor da maior venda
+     diaMaiorVenda = i; //Atualiza o dia que obteve a maior venda
+  } // Senão faz nada, passa para o próximo dia
+}
+
+//Passo 4: Mostrar o valor da soma
+alert ('O maior número de vendas foi: '+quantidadeMaiorVenda+' e no dia '+diaMaiorVenda+'de abril');
+
+
+diaMaiorVenda = 1;
+
+// Passo 2: Ler o número de discos vendidos do primeiro dia, para a gente ter um
+// Parâmetro, assumindo que o primeiro dia de Abril obteve a maior venda.
+quantidadeMaiorVenda = +prompt("Digite o número de vendas do dia 1 de abril");
+
+// Passo 3: Criar um laço que lê o número de discos vendidos no i-ésimo dia.
+var i = 2;
+while (i <= 30) {
+  var vendas = +prompt("Digite o número de vendas do dia "+i+" de abril");
+  if (vendas > quantidadeMaiorVenda) { //Verifica se o número de vendas foi maior
+                                       // do que o maior atual, se for
+     quantidadeMaiorVenda = vendas; //Atualiza o valor da maior venda
+     diaMaiorVenda = i; //Atualiza o dia que obteve a maior venda
+  } // Senão faz nada, passa para o próximo dia
+  i = i + 1
+}
+
+//Passo 4: Mostrar o valor da soma
+alert ('O maior número de vendas foi: '+quantidadeMaiorVenda+' e no dia '+diaMaiorVenda+'de abril');
+
+</script>

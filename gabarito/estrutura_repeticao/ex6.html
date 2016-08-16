@@ -1,0 +1,44 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 06 - Lista do While
+// Em todos os exercícios irei responder utilizando while e for.
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+
+// A jogada nesse exercício é saber que as operações que se repetem é ler um número
+// da sequência, de tamanho n.
+
+var n, // variável que guarda o valor digitado pelo usuário.
+    soma = 0; // Variável que guardará a soma dos n inteiros digitados, Inicializa
+              // com 0, pois 0 é um elemento neutro em uma soma
+
+// Passo 1: Ler um número inteiro positivo.
+n = +prompt("Digite um número inteiro positivo");
+
+
+// Passo 2: Criar um laço que lê um número e soma ele à variável soma.
+// A ideia é que na i-ésima execução do laço o valor de soma é igual à soma dos
+// i elementos da sequência digitada pelo usuário.
+for (var i = 1;  i <= n; i = i + 1) {
+  var inteiro = +prompt("Digite um inteiro");
+  soma = soma + inteiro;
+}
+
+//Passo 3: Mostrar o valor da soma
+alert(soma);
+
+// Passo 2: Criar um laço que lê um número e soma ele à variável soma.
+// A ideia é que na i-ésima execução do laço o valor de soma é igual à soma dos
+// i elementos da sequência digitada pelo usuário.
+soma = 0;
+while (n > 0) {
+  var inteiro = +prompt("Digite um inteiro");
+  soma = soma + inteiro;
+  n = n - 1;
+}
+
+//Passo 3: Mostrar o valor da soma
+alert(soma);
+
+</script>

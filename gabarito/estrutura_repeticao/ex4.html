@@ -1,0 +1,38 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 04 - Lista do While
+// Em todos os exercícios irei responder utilizando while e for.
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+var n, // variável que guarda o valor digitado pelo usuário.
+    potencia = 1; // Variável que guardará o valor da i-ésima potência de 2.
+
+// Passo 1: Ler a entrada do usuário, no caso o número inteiro positivo n.
+n = +prompt("Digite um número inteiro positivo");
+
+// Resposta utilizando FOR
+// Passo 2: Realizar a multiplicação da variável potência por 2 e mostrar o
+//          resultado.
+for (var i = 1; i <= n; i = i + 1) {
+  potencia = potencia * 2; // quando realizamos essa operação estamos calculando
+                          // o 2 elevado a i, pois na execução do laço anterior
+                          // já havia sido calculado o 2 elevado a i-1.
+  alert(potencia); // Aqui estamos mostrando o resultado do 2 elevado à i.
+}
+
+// Resposta utilizando WHILE
+// Passo 2: Realizar a multiplicação da variável potência por 2 e mostrar o
+//          resultado.
+var i = 1;
+var potencia = 1;
+while (i <= n) {
+  potencia = potencia * 2; // quando realizamos essa operação estamos calculando
+                          // o 2 elevado a i, pois na execução do laço anterior
+                          // já havia sido calculado o 2 elevado a i-1.
+  alert(potencia); // Aqui estamos mostrando o resultado do 2 elevado à i.
+  i = i + 1;
+}
+
+
+</script>

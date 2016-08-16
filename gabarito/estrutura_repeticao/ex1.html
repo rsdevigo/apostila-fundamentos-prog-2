@@ -1,0 +1,49 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 01 - Lista do While
+// Em todos os exercícios irei responder utilizando while e for.
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+var n,
+    soma = 0; // Inicializa a variável soma com zero, pois ela guardará o valor
+              // da soma dos n primeiros inteiros positivos, começa com zero
+              // pois é um elemento neutro em uma soma.
+
+// Passo 1: Ler a entrada do usuário, no caso o número inteiro positivo n.
+n = +prompt("Digite um número inteiro positivo");
+
+// Resposta utilizando FOR
+// Passo 2: Calcular a soma dos n primeiros inteiros positivos, ou seja, se n é
+//          3 o laço irá somar, 1 + 2 + 3.
+for (var i = 1; i <= n; i = i + 1) {
+  soma = soma + i; // Aqui a cada execução do for, você garante que a variável
+                  // soma está com o valor de 1 + ... + i. Até que o i seja n, e
+                  // finaliza a execução, e isso garante que a variável soma
+                  // esteja com o valor de 1 + ... + n
+}
+
+// Passo 3: Mostrar o resultado da soma
+alert(soma);
+
+
+// Resposta utilizando WHILE
+// Passo 2: Calcular a soma dos n primeiros inteiros positivos, ou seja, se n é
+//          3 o laço irá somar, 1 + 2 + 3.
+
+soma = 0; // Inicializa a variável soma novamente para montar o algoritmo com while
+var i = 1; // Inicializa a variável de controle.
+
+while (i <= n) {
+  soma = soma + i; // Aqui a cada execução do while, você garante que a variável
+                  // soma está com o valor de 1 + ... + i. Até que o i seja n, e
+                  // finaliza a execução, e isso garante que a variável soma
+                  // esteja com o valor de 1 + ... + n
+  i = i + 1; // Aqui você garante que o i seja incrementado afim do i assumir os
+            // valores dos n primeiros inteiros positivos.
+}
+
+// Passo 3: Mostrar o resultado da soma
+alert(soma);
+
+</script>

@@ -1,0 +1,46 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 05 - Lista do While
+// Em todos os exercícios irei responder utilizando while e for.
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+var n, // variável que guarda o valor digitado pelo usuário.
+    x,
+    potencia = 1; // Variável que guardará o valor de x^n
+
+// Passo 1: Ler a entrada do usuário, no caso o número inteiro x.
+x = +prompt("Digite um número inteiro");
+
+// Passo 2: Ler a entrada do usuário, no caso o número natural n.
+n = +prompt("Digite um número natural");
+
+// Resposta utilizando FOR
+// Passo 2: Realizar a multiplicação da variável x por ela mesma n vezes.
+for (var i = 1; i <= n; i = i + 1) {
+  potencia = potencia * x; // Aqui a cada execução do laço a variável potencia
+                           // contem o valor de x elevado a i.
+                           // até que quando i assumir o valor de n, potencia tem
+                           // o valor de x elevado a n.
+}
+
+// Passo 3: Mostrar o resultado de x elevado a n.
+alert(potencia);
+
+// Resposta utilizando WHILE
+// Passo 2: Realizar a multiplicação da variável potência por 2 e mostrar o
+//          resultado.
+var i = 1;
+var potencia = 1;
+while (i <= n) {
+  potencia = potencia * x; // Aqui a cada execução do laço a variável potencia
+                           // contem o valor de x elevado a i.
+                           // até que quando i assumir o valor de n, potencia tem
+                           // o valor de x elevado a n.
+  i = i + 1;
+}
+
+// Passo 3: Mostrar o resultado de x elevado a n.
+alert(potencia);
+
+</script>

@@ -1,0 +1,43 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 09 - Lista do While
+// Em todos os exercícios irei responder utilizando while e for.
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+
+var nAbaixoZero = 0; // Variável que guardará o número de dias que a temperatura
+                    // de Campo Grande foi abaixo de 0
+
+// Passo 1: Ler 31 valores de temperatura e a cada leitura decidir se foi abaixo de zero ou não
+// Caso sim, incrementar a quantidade de dias que a temperatura foi abaixo de
+// zero.
+// Caso não, ler o próximo número.
+for (var i = 1;  i <= 31; i = i + 1) {
+  var inteiro = +prompt("Digite uma temperatura");
+  if (inteiro < 0.0) {
+    nAbaixoZero = nAbaixoZero + 1;
+  }
+}
+
+//Passo 3: Mostrar o úmero de dias que a temperatura de Campo Grande foi abaixo de 0
+alert('O número de dias que a temperatura foi abaixo de zero: '+nAbaixoZero);
+
+
+// Passo 1: Ler 31 valores de temperatura e a cada leitura decidir se foi abaixo de zero ou não
+// Caso sim, incrementar a quantidade de dias que a temperatura foi abaixo de
+// zero.
+// Caso não, ler o próximo número.
+var i = 1;
+while (i <= 31) {
+  var inteiro = +prompt("Digite uma temperatura");
+  if (inteiro < 0.0) {
+    nAbaixoZero = nAbaixoZero + 1;
+  }
+  i = i + 1;
+}
+
+//Passo 3: Mostrar o úmero de dias que a temperatura de Campo Grande foi abaixo de 0
+alert('O número de dias que a temperatura foi abaixo de zero: '+nAbaixoZero);
+
+</script>

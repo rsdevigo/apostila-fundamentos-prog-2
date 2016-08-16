@@ -1,0 +1,62 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 08 - Lista do While
+// Em todos os exercícios irei responder utilizando while e for.
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+
+// A jogada nesse exercício é saber que as operações que se repetem é ler um número
+// da sequência, de tamanho n e realizar a verificação se o elemento é par ou impar
+// para decidir onde esse elemento será somado.
+
+var n, // variável que guarda o valor digitado pelo usuário.
+    somaPares = 0; // Variável que guardará a soma dos n inteiros pares digitados, Inicializa
+              // com 0, pois 0 é um elemento neutro em uma soma
+    somaImpares = 0; // Variável que guardará a soma dos n inteiros impares digitados, Inicializa
+              // com 0, pois 0 é um elemento neutro em uma soma
+
+// Passo 1: Ler um número inteiro positivo.
+n = +prompt("Digite um número inteiro positivo");
+
+
+// Passo 2: Criar um laço que lê um número e soma ele à variável somaPares se
+// o número for Par e somaImpares se o número for impar.
+for (var i = 1;  i <= n; i = i + 1) {
+  var inteiro = +prompt("Digite um inteiro");
+  if (inteiro % 2 == 0) { // Verificamos se o valor digitado pelo usuário é par
+                          // se for somamos ele à soma parcial dos números pares
+                          // até então digitados.
+      somaPares = somaPares + inteiro;
+  } else { //Senão o número digitado é impar e devemos somar à soma parcial
+           // dos números impares até então digitados.
+    somaImpares = somaImpares + inteiro;
+  }
+}
+
+//Passo 3: Mostrar o valor da somaPares e somaImpares
+alert('A soma dos números pares é: '+somaPares);
+alert('A soma dos números impares é: '+somaImpares);
+
+// Passo 2: Criar um laço que lê um número e soma ele à variável somaPares se
+// o número for Par e somaImpares se o número for impar.
+somaPares = 0;
+somaImpares = 0;
+while (n > 0) {
+  var inteiro = +prompt("Digite um inteiro");
+  if (inteiro % 2 == 0) { // Verificamos se o valor digitado pelo usuário é par
+                          // se for somamos ele à soma parcial dos números pares
+                          // até então digitados.
+      somaPares = somaPares + inteiro;
+  } else { //Senão o número digitado é impar e devemos somar à soma parcial
+           // dos números impares até então digitados.
+    somaImpares = somaImpares + inteiro;
+  }
+  n = n - 1;
+}
+
+//Passo 3: Mostrar o valor da somaPares e somaImpares
+alert('A soma dos números pares é: '+somaPares);
+alert('A soma dos números impares é: '+somaImpares);
+
+</script>

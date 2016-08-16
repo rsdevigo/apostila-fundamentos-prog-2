@@ -1,0 +1,59 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 11 - Lista do While
+// Em todos os exercícios irei responder utilizando while e for.
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+
+var n, // variável que guarda o valor digitado pelo usuário.
+    nPares = 0, // Variável que guardará o número de inteiros pares digitados
+    nImpares = 0; // Variável que guardará o número de inteiros impares digitados
+
+// Passo 1: Ler um número inteiro positivo.
+n = +prompt("Digite um número inteiro positivo");
+
+
+// Passo 2: Criar um laço que lê um número e verifica se o mesmo é par.
+// Caso for par: o contador de pares é incrementado
+// Caso não for: o contador de impares é incrementado
+for (var i = 1;  i <= n; i = i + 1) {
+  var inteiro = +prompt("Digite um inteiro");
+  if (inteiro % 2 == 0) { // Verificamos se o valor digitado pelo usuário par
+                      // se for, o nPares é incrementado, simbolizando
+                     // que dentre a sequência digitada apareceu mais um numero
+                     // par.
+      nPares = nPares + 1;
+  } else {
+    nImpares = nImpares + 1;
+  }
+
+}
+
+//Passo 3: Mostrar o valor da soma
+alert ('O número de números pares é: '+nPares);
+alert ('O número de números impares é: '+nImpares);
+
+
+nPares = 0;
+nImpares = 0;
+// Passo 2: Criar um laço que lê um número e verifica se o mesmo é par.
+// Caso for par: o contador de pares é incrementado
+// Caso não for: o contador de impares é incrementado
+while (n > 0) {
+  var inteiro = +prompt("Digite um inteiro");
+  if (inteiro % 2 == 0) { // Verificamos se o valor digitado pelo usuário par
+                      // se for, o nPares é incrementado, simbolizando
+                     // que dentre a sequência digitada apareceu mais um numero
+                     // par.
+      nPares = nPares + 1;
+  } else {
+    nImpares = nImpares + 1;
+  }
+}
+
+//Passo 3: Mostrar o valor da soma
+alert ('O número de números pares é: '+nPares);
+alert ('O número de números impares é: '+nImpares);
+
+</script>
