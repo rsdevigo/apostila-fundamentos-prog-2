@@ -1,0 +1,30 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 04 - Lista de vetor
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+
+
+var freq = [0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0], //37 elementos
+    n;
+
+
+// Ler o número de vezes que o dado foi lançado
+n = +prompt("Digite o número de lançamentos realizados na roleta");
+
+// Ler os resultados dos n lançamentos.
+for (var i = 0; i < n; i++) {
+  var resultado = +prompt("Digite o resultado do "+i+"° lançamento");
+  freq[resultado-1]++; //Soma-se 1 à posição resultado-1,
+                       //assim quando cair na roleta cair 37, a posição 36 do vetor de 37 elementos é incrementado.
+}
+
+alert(freq);
+
+</script>

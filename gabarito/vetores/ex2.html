@@ -1,0 +1,49 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 02 - Lista de vetor
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+
+/*
+Esse programa têm 3 entradas:
+* O gabarito composto por 30 letras que corresponde ao gabarito da prova
+* O número de estudantes
+* A prova de cada estudante.
+*/
+
+
+var gabarito = [],
+    n;
+
+// Ler o gabarito
+for (var i = 0; i < 30; i++) {
+  var resposta = prompt("Digite a resposta da "+(i+1)+"ª questão")
+  gabarito.push(resposta);
+}
+
+// Ler o número de estudantes
+n = +prompt("Digite o número de estudantes");
+
+for (var i = 0; i < n; i++) {
+  var prova = [];
+  // Para cada estudante ler as 30 respostas para as 30 questões da prova
+  for (var j = 0; j < 30; j++) {
+    var resposta = prompt("Digite a resposta da "+(j+1)+"ª questão do "+(i+1)+"° estudante");
+    prova.push(resposta);
+  }
+
+  var numeroAcertos = 0;
+  //Agora faz a comparação da prova e do gabarito, verificando se o valor
+  //do gabarito[j] == prova[j], se for o numero de acertos do estudante i aumenta
+  //em 1.
+  for (var j = 0; j < 30; j++) {
+    if (gabarito[j] == prova[j]) {
+      numeroAcertos++;
+    }
+  }
+
+  alert("O numero de acertos do "+(i+1)+"º estudante foi "+numeroAcertos);
+}
+
+</script>

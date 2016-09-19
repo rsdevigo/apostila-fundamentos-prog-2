@@ -1,0 +1,48 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 05 - Lista de vetor
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+
+
+var sequencia = [],
+    n,
+    ehBalanceada = 1;
+
+n = +prompt("Digite o tamanho da sequência");
+
+for (var i = 0; i < n; i++) {
+  var elemento = +prompt("Digite o "+(i+1)+"° elemento da sequência");
+  sequencia.push(elemento);
+}
+
+var soma = sequencia[0]+sequencia[n-1];
+
+// Ordena o vetor: utilizando a ideia vista na atividade do condominio
+for (var i = 0; i < n; i++) { //Laço rebeca e Luiza
+  var menor = i;
+  for (var j = i+1; j < n; j++) { //laço Ray e Nycolas
+    if (sequencia[j] < sequencia[menor]) {
+      menor = j;
+    }
+  }
+  var aux = sequencia[menor];
+  sequencia[menor] = sequencia[i];
+  sequencia[i] = aux;
+}
+
+for (var i = 1, j = n-2; i < parseInt(n/2); i++, j--) { // por que caminhamos até a metade do vetor ????
+  if (sequencia[i]+sequencia[j] != soma) {
+    ehBalanceada = 0;
+    break;
+  }
+}
+
+if (ehBalanceada == 1) {
+  alert("É balanceada");
+} else {
+  alert("Não é balanceada");
+}
+
+</script>

@@ -1,0 +1,20 @@
+<!-- Linha responsável por deixar acento nos alerts e prompt -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+// Exercício 01 - Lista de vetor
+// Autor: Rodrigo Sanches Devigo
+// Conteúdo sob licenciamento Creative Commons Atribuição 4.0 Internacional
+
+var sequencia = [],
+    n;
+
+n = +prompt("Digite o tamanho da sequência");
+
+for (var i = 0; i < n; i++) {
+  var elemento = +prompt("Digite o "+(i+1)+"° elemento da sequência");
+  sequencia.unshift(elemento);
+}
+
+alert(sequencia);
+
+</script>
