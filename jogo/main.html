@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>Roguelike</title>
+</head>
+<body>
+<script type="text/javascript" src="phaser.min.js"></script>
+<script type="text/javascript" src="game.js"></script>
+<script>
+
+var LARGURA = 30;
+var ALTURA = 30;
+var FONT = 20;
+var personagem;
+var objetivo;
+var mapa;
+var asciiDisplay;
+
+var create = function(){
+	game.input.keyboard.addCallbacks(null, null, onKeyUp);
+	personagem = [0,0];
+	objetivo = [15,15];
+	mapa = setup(LARGURA, ALTURA, personagem, objetivo);
+    asciiDisplay = [];
+    for (var i = 0; i < ALTURA; i++) {
+        var newRow = [];
+        asciiDisplay.push(newRow);
+        for (var j = 0; j < LARGURA; j++) {
+            newRow.push(initCell('', j, i));    
+        }
+    }
+	desenhaMapa(mapa, LARGURA, ALTURA, asciiDisplay);
+};
+
+
+function initCell(chr, x, y) {
+        // add a single cell in a given position to the ascii display
+        var style = { font: FONT + "px monospace", fill:"#fff"};
+        return game.add.text(FONT*0.6*x, FONT*y, chr, style);
+}
+
+var game = new Phaser.Game(LARGURA*FONT*0.6, ALTURA*FONT, Phaser.AUTO, null, {
+	create: create
+});
+
+
+
+var onKeyUp = function(event) {
+    switch (event.keyCode) {
+            case Phaser.Keyboard.LEFT:
+                if (podeIr(mapa, personagem, ALTURA, LARGURA, "Esquerda")) {
+                    facaMovimento(mapa, personagem, [-1,0]);    
+                }
+            	break;
+            case Phaser.Keyboard.RIGHT:
+                if (podeIr(mapa, personagem, ALTURA, LARGURA, "Direita")) {
+            	   facaMovimento(mapa, personagem, [1,0]);
+                }
+            	break;
+            case Phaser.Keyboard.UP:
+                if (podeIr(mapa, personagem, ALTURA, LARGURA, "Cima")) {
+            	   facaMovimento(mapa, personagem, [0,-1]);
+                }
+            	break;
+            case Phaser.Keyboard.DOWN:
+                if (podeIr(mapa, personagem, ALTURA, LARGURA, "Baixo")) {
+            	   facaMovimento(mapa, personagem, [0,1]);
+                }
+            	break;
+    }
+    desenhaMapa(mapa, LARGURA, ALTURA, asciiDisplay);
+    if (personagem[0] == objetivo[0] && personagem[1] == objetivo[1]) {
+        alert("Fim de Jogo ! Você ganhou");
+    }
+}
+
+
+var desenhaMapa = function(mapa, largura, altura) {
+	for (var i = 0; i < largura; i++) {
+		for (var j = 0; j < altura; j++) {
+			asciiDisplay[i][j].text = mapa[i][j];
+		}
+	}
+}
+
+</script>
+</body>
+</html>
